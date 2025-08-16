@@ -5,11 +5,18 @@ const connectDB = require("./config/database");
 
 // Routes
 const authRoutes = require("./routes/auth");
+const uploadRoutes = require("./routes/uploads");
 
 const app = express();
 
 // Universal CORS setup
-app.use(cors({ origin: "*", methods: ["GET", "POST", "PUT", "DELETE"], allowedHeaders: ["Content-Type", "Authorization"] }));
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -36,6 +43,7 @@ app.get("/api/health", (req, res) => {
 
 // API Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/image", uploadRoutes);
 
 // Export app for Vercel (serverless)
 module.exports = app;
