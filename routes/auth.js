@@ -8,3 +8,4 @@ router.post("/admin/register", registerAdmin);
 router.post("/login", login);
 
 module.exports = router;
+

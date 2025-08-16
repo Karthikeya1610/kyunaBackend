@@ -4,3 +4,4 @@ module.exports = {
   // Cloudinary settings will go here
 };
 
+
