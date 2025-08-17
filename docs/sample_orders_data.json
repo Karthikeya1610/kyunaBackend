@@ -1,0 +1,107 @@
+{
+  "orders": [
+    {
+      "orderItems": [
+        {
+          "item": "64f8a1b2c3d4e5f6a7b8c9d0",
+          "name": "Diamond Engagement Ring",
+          "price": 2200.0,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500"
+        }
+      ],
+      "shippingAddress": {
+        "address": "123 Main Street",
+        "city": "New York",
+        "postalCode": "10001",
+        "country": "USA",
+        "phone": "+1-555-0123"
+      },
+      "paymentMethod": "Credit Card",
+      "itemsPrice": 2200.0,
+      "taxPrice": 176.0,
+      "shippingPrice": 25.0,
+      "notes": "Please deliver during business hours"
+    },
+    {
+      "orderItems": [
+        {
+          "item": "64f8a1b2c3d4e5f6a7b8c9d1",
+          "name": "Pearl Necklace",
+          "price": 450.0,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=500"
+        },
+        {
+          "item": "64f8a1b2c3d4e5f6a7b8c9d2",
+          "name": "Sapphire Stud Earrings",
+          "price": 1600.0,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=500"
+        }
+      ],
+      "shippingAddress": {
+        "address": "456 Oak Avenue",
+        "city": "Los Angeles",
+        "postalCode": "90210",
+        "country": "USA",
+        "phone": "+1-555-0456"
+      },
+      "paymentMethod": "PayPal",
+      "itemsPrice": 2050.0,
+      "taxPrice": 164.0,
+      "shippingPrice": 30.0,
+      "notes": "Gift wrapping requested"
+    },
+    {
+      "orderItems": [
+        {
+          "item": "64f8a1b2c3d4e5f6a7b8c9d3",
+          "name": "Gold Bangle Bracelet",
+          "price": 1200.0,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500"
+        }
+      ],
+      "shippingAddress": {
+        "address": "789 Pine Street",
+        "city": "Chicago",
+        "postalCode": "60601",
+        "country": "USA",
+        "phone": "+1-555-0789"
+      },
+      "paymentMethod": "Bank Transfer",
+      "itemsPrice": 2400.0,
+      "taxPrice": 192.0,
+      "shippingPrice": 25.0,
+      "notes": "Express shipping preferred"
+    }
+  ],
+  "orderStatuses": [
+    "Pending",
+    "Confirmed",
+    "Processing",
+    "Shipped",
+    "Delivered",
+    "Cancelled",
+    "Refunded"
+  ],
+  "paymentMethods": [
+    "Credit Card",
+    "PayPal",
+    "Bank Transfer",
+    "Cash on Delivery"
+  ],
+  "shippingCities": [
+    "New York",
+    "Los Angeles",
+    "Chicago",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego",
+    "Dallas",
+    "San Jose"
+  ]
+}

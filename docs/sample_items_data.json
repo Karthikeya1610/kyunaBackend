@@ -1,0 +1,378 @@
+{
+  "items": [
+    {
+      "name": "Diamond Engagement Ring",
+      "category": "Rings",
+      "price": 2500.0,
+      "discountPrice": 2200.0,
+      "availability": "In Stock",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500",
+          "publicId": "diamond_ring_1"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=500",
+          "publicId": "diamond_ring_2"
+        }
+      ],
+      "description": "Stunning 14k white gold engagement ring featuring a brilliant-cut diamond center stone with pave diamond accents on the band.",
+      "specifications": {
+        "carat": "1.25",
+        "clarity": "VS1",
+        "color": "D",
+        "metal": "14k White Gold",
+        "bandWidth": "2.5mm",
+        "setting": "Pave"
+      },
+      "rating": 4.8,
+      "totalReviews": 45,
+      "ratingBreakdown": {
+        "5": 35,
+        "4": 8,
+        "3": 2,
+        "2": 0,
+        "1": 0
+      }
+    },
+    {
+      "name": "Pearl Necklace",
+      "category": "Necklaces",
+      "price": 450.0,
+      "discountPrice": null,
+      "availability": "In Stock",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=500",
+          "publicId": "pearl_necklace_1"
+        }
+      ],
+      "description": "Elegant freshwater pearl necklace with 18-inch length, perfect for both casual and formal occasions.",
+      "specifications": {
+        "pearlType": "Freshwater",
+        "pearlSize": "8mm",
+        "length": "18 inches",
+        "clasp": "Lobster",
+        "metal": "Sterling Silver"
+      },
+      "rating": 4.6,
+      "totalReviews": 28,
+      "ratingBreakdown": {
+        "5": 20,
+        "4": 6,
+        "3": 2,
+        "2": 0,
+        "1": 0
+      }
+    },
+    {
+      "name": "Sapphire Stud Earrings",
+      "category": "Earrings",
+      "price": 1800.0,
+      "discountPrice": 1600.0,
+      "availability": "In Stock",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=500",
+          "publicId": "sapphire_earrings_1"
+        }
+      ],
+      "description": "Classic sapphire stud earrings set in 14k yellow gold, featuring natural blue sapphires with excellent clarity.",
+      "specifications": {
+        "gemstone": "Natural Sapphire",
+        "carat": "2.0",
+        "clarity": "VS2",
+        "color": "Royal Blue",
+        "metal": "14k Yellow Gold",
+        "backing": "Push Back"
+      },
+      "rating": 4.9,
+      "totalReviews": 32,
+      "ratingBreakdown": {
+        "5": 28,
+        "4": 3,
+        "3": 1,
+        "2": 0,
+        "1": 0
+      }
+    },
+    {
+      "name": "Gold Bangle Bracelet",
+      "category": "Bracelets",
+      "price": 1200.0,
+      "discountPrice": null,
+      "availability": "Out of Stock",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500",
+          "publicId": "gold_bangle_1"
+        }
+      ],
+      "description": "Solid 18k gold bangle bracelet with a classic design, perfect for stacking or wearing alone.",
+      "specifications": {
+        "metal": "18k Yellow Gold",
+        "weight": "12.5 grams",
+        "width": "6mm",
+        "diameter": "2.5 inches",
+        "finish": "Polished"
+      },
+      "rating": 4.7,
+      "totalReviews": 19,
+      "ratingBreakdown": {
+        "5": 14,
+        "4": 4,
+        "3": 1,
+        "2": 0,
+        "1": 0
+      }
+    },
+    {
+      "name": "Emerald Cut Diamond Ring",
+      "category": "Rings",
+      "price": 3200.0,
+      "discountPrice": 2900.0,
+      "availability": "In Stock",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500",
+          "publicId": "emerald_ring_1"
+        }
+      ],
+      "description": "Sophisticated emerald-cut diamond ring set in platinum, featuring a 2.5-carat center stone with baguette side stones.",
+      "specifications": {
+        "carat": "2.5",
+        "clarity": "VVS1",
+        "color": "E",
+        "metal": "Platinum",
+        "cut": "Emerald",
+        "sideStones": "Baguette Diamonds"
+      },
+      "rating": 4.9,
+      "totalReviews": 41,
+      "ratingBreakdown": {
+        "5": 35,
+        "4": 5,
+        "3": 1,
+        "2": 0,
+        "1": 0
+      }
+    },
+    {
+      "name": "Silver Chain Necklace",
+      "category": "Necklaces",
+      "price": 180.0,
+      "discountPrice": 150.0,
+      "availability": "In Stock",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=500",
+          "publicId": "silver_chain_1"
+        }
+      ],
+      "description": "Minimalist sterling silver chain necklace with a delicate design, perfect for everyday wear.",
+      "specifications": {
+        "metal": "Sterling Silver",
+        "length": "16 inches",
+        "width": "1.5mm",
+        "clasp": "Lobster",
+        "finish": "Polished"
+      },
+      "rating": 4.4,
+      "totalReviews": 67,
+      "ratingBreakdown": {
+        "5": 45,
+        "4": 15,
+        "3": 5,
+        "2": 2,
+        "1": 0
+      }
+    },
+    {
+      "name": "Rose Gold Hoop Earrings",
+      "category": "Earrings",
+      "price": 650.0,
+      "discountPrice": null,
+      "availability": "In Stock",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=500",
+          "publicId": "rose_gold_hoops_1"
+        }
+      ],
+      "description": "Elegant rose gold hoop earrings with a modern design, perfect for adding a touch of sophistication to any outfit.",
+      "specifications": {
+        "metal": "14k Rose Gold",
+        "diameter": "1 inch",
+        "thickness": "2mm",
+        "backing": "Push Back",
+        "finish": "Polished"
+      },
+      "rating": 4.6,
+      "totalReviews": 23,
+      "ratingBreakdown": {
+        "5": 17,
+        "4": 4,
+        "3": 2,
+        "2": 0,
+        "1": 0
+      }
+    },
+    {
+      "name": "Diamond Tennis Bracelet",
+      "category": "Bracelets",
+      "price": 2800.0,
+      "discountPrice": 2500.0,
+      "availability": "In Stock",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500",
+          "publicId": "tennis_bracelet_1"
+        }
+      ],
+      "description": "Stunning diamond tennis bracelet featuring round brilliant-cut diamonds set in 14k white gold with a secure clasp.",
+      "specifications": {
+        "metal": "14k White Gold",
+        "totalCarat": "3.2",
+        "diamondCount": "45",
+        "length": "7 inches",
+        "clasp": "Hidden",
+        "setting": "Pave"
+      },
+      "rating": 4.8,
+      "totalReviews": 38,
+      "ratingBreakdown": {
+        "5": 30,
+        "4": 6,
+        "3": 2,
+        "2": 0,
+        "1": 0
+      }
+    },
+    {
+      "name": "Ruby Pendant Necklace",
+      "category": "Necklaces",
+      "price": 950.0,
+      "discountPrice": 850.0,
+      "availability": "In Stock",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=500",
+          "publicId": "ruby_pendant_1"
+        }
+      ],
+      "description": "Beautiful ruby pendant necklace featuring a natural ruby gemstone set in 14k yellow gold with a delicate chain.",
+      "specifications": {
+        "gemstone": "Natural Ruby",
+        "carat": "1.8",
+        "clarity": "VS1",
+        "color": "Pigeon Blood Red",
+        "metal": "14k Yellow Gold",
+        "chainLength": "18 inches"
+      },
+      "rating": 4.7,
+      "totalReviews": 25,
+      "ratingBreakdown": {
+        "5": 19,
+        "4": 4,
+        "3": 2,
+        "2": 0,
+        "1": 0
+      }
+    },
+    {
+      "name": "Platinum Wedding Band",
+      "category": "Rings",
+      "price": 1800.0,
+      "discountPrice": null,
+      "availability": "In Stock",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500",
+          "publicId": "platinum_band_1"
+        }
+      ],
+      "description": "Classic platinum wedding band with a comfort fit design, perfect for everyday wear and comfort.",
+      "specifications": {
+        "metal": "Platinum",
+        "width": "4mm",
+        "weight": "8.2 grams",
+        "fit": "Comfort Fit",
+        "finish": "Polished"
+      },
+      "rating": 4.9,
+      "totalReviews": 89,
+      "ratingBreakdown": {
+        "5": 75,
+        "4": 12,
+        "3": 2,
+        "2": 0,
+        "1": 0
+      }
+    }
+  ],
+  "categories": [
+    "Rings",
+    "Necklaces",
+    "Earrings",
+    "Bracelets",
+    "Pendants",
+    "Chains",
+    "Anklets",
+    "Brooches"
+  ],
+  "priceRanges": [
+    {
+      "range": "Under $100",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "range": "$100 - $500",
+      "min": 100,
+      "max": 500
+    },
+    {
+      "range": "$500 - $1000",
+      "min": 500,
+      "max": 1000
+    },
+    {
+      "range": "$1000 - $2000",
+      "min": 1000,
+      "max": 2000
+    },
+    {
+      "range": "$2000 - $5000",
+      "min": 2000,
+      "max": 5000
+    },
+    {
+      "range": "Over $5000",
+      "min": 5000,
+      "max": null
+    }
+  ],
+  "metals": [
+    "14k Yellow Gold",
+    "14k White Gold",
+    "14k Rose Gold",
+    "18k Yellow Gold",
+    "18k White Gold",
+    "18k Rose Gold",
+    "Platinum",
+    "Sterling Silver",
+    "Palladium"
+  ],
+  "gemstones": [
+    "Diamond",
+    "Ruby",
+    "Sapphire",
+    "Emerald",
+    "Pearl",
+    "Opal",
+    "Amethyst",
+    "Citrine",
+    "Tanzanite",
+    "Aquamarine"
+  ]
+}

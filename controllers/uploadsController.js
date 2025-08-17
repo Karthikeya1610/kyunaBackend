@@ -42,4 +42,21 @@ const deleteImage = async (req, res) => {
   }
 };
 
-module.exports = { uploadImage, deleteImage };
+const getAllImages = async (req, res) => {
+  try {
+    const { resources } = await cloudinary.api.resources({
+      type: "upload",
+      resource_type: "image",
+      prefix: "kyuna-jewellery/items",
+      max_results: 100,
+    });
+
+    res.status(200).json({ images: resources });
+  } catch (err) {
+    res
+      .status(500)
+      .json({ message: "Failed to fetch images", error: err.message });
+  }
+};
+
+module.exports = { uploadImage, deleteImage, getAllImages };

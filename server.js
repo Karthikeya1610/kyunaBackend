@@ -1,54 +1,50 @@
-const express = require("express");
-const cors = require("cors");
-require("dotenv").config();
-const connectDB = require("./config/database");
+const express = require('express');
+const cors = require('cors');
+require('dotenv').config();
+const connectDB = require('./config/database');
 
-// Routes
-const authRoutes = require("./routes/auth");
-const uploadRoutes = require("./routes/uploads");
+const authRoutes = require('./routes/auth');
+const uploadRoutes = require('./routes/uploads');
+const itemRoutes = require('./routes/items');
+const orderRoutes = require('./routes/orders');
 
 const app = express();
 
-// Universal CORS setup
 app.use(
   cors({
-    origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
   })
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Connect to MongoDB
 connectDB();
 
-// Base route
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   res.json({
-    message: "Welcome to Kyuna Jewellery Backend API!",
-    status: "Server is running successfully",
+    message: 'Welcome to Kyuna Jewellery Backend API!',
+    status: 'Server is running successfully',
     timestamp: new Date().toISOString(),
   });
 });
 
-// Health check route
-app.get("/api/health", (req, res) => {
+app.get('/api/health', (req, res) => {
   res.json({
-    status: "OK",
-    message: "Server is healthy",
+    status: 'OK',
+    message: 'Server is healthy',
     timestamp: new Date().toISOString(),
   });
 });
 
-// API Routes
-app.use("/api/auth", authRoutes);
-app.use("/api/image", uploadRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/image', uploadRoutes);
+app.use('/api/items', itemRoutes);
+app.use('/api/orders', orderRoutes);
 
-// Export app for Vercel (serverless)
 module.exports = app;
 
-// Local development server
 if (require.main === module) {
   const PORT = process.env.PORT || 5001;
   app.listen(PORT, () => {

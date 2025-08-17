@@ -3,5 +3,3 @@
 module.exports = {
   // Upload middleware functions will go here
 };
-
-
