@@ -102,6 +102,12 @@ const getAllItems = async (req, res) => {
     const totalItems = await Item.countDocuments(filter);
     const totalPages = Math.ceil(totalItems / parseInt(limit));
 
+    res.set({
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      Pragma: 'no-cache',
+      Expires: '0',
+    });
+
     res.status(200).json({
       message: 'Items retrieved successfully',
       items,
