@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const itemSchema = new mongoose.Schema(
   {
@@ -10,18 +10,18 @@ const itemSchema = new mongoose.Schema(
     totalReviews: { type: Number, default: 0 },
     availability: {
       type: String,
-      enum: ["In Stock", "Out of Stock"],
-      default: "In Stock",
+      enum: ['In Stock', 'Out of Stock'],
+      default: 'In Stock',
     },
 
     images: [
       {
-        url: { type: String, required: true },
-        publicId: { type: String, required: true },
+        url: { type: String },
+        publicId: { type: String },
       },
     ],
 
-    description: { type: String, default: "" },
+    description: { type: String, default: '' },
 
     specifications: {
       type: Map,
@@ -37,4 +37,4 @@ const itemSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Item", itemSchema);
+module.exports = mongoose.model('Item', itemSchema);
