@@ -1,0 +1,126 @@
+{
+  "queries": [
+    {
+      "subject": "Payment Issue with Order #12345",
+      "message": "I made a payment for my order #12345 but the order status still shows as pending. The payment was deducted from my account but I haven't received any confirmation. Please help me resolve this issue.",
+      "category": "billing",
+      "priority": "high",
+      "tags": ["payment", "order-issue", "pending"],
+      "status": "open"
+    },
+    {
+      "subject": "Product Quality Concern",
+      "message": "I received my necklace today but it doesn't match the quality shown in the product images. The stones appear to be different and the finish is not as polished as expected. I would like to know about the return policy.",
+      "category": "product",
+      "priority": "medium",
+      "tags": ["quality", "return", "necklace"],
+      "status": "open"
+    },
+    {
+      "subject": "Website Login Problem",
+      "message": "I'm unable to log into my account. When I try to enter my credentials, I get an error message saying 'Invalid credentials'. I'm sure I'm using the correct email and password. Please help me access my account.",
+      "category": "technical",
+      "priority": "medium",
+      "tags": ["login", "credentials", "account"],
+      "status": "in_progress"
+    },
+    {
+      "subject": "Order Tracking Information",
+      "message": "I placed an order last week and would like to know the current status. The tracking number provided doesn't seem to be working. Can you please provide an update on my order #12346?",
+      "category": "order",
+      "priority": "low",
+      "tags": ["tracking", "status", "shipping"],
+      "status": "resolved"
+    },
+    {
+      "subject": "Size Recommendation Needed",
+      "message": "I'm interested in purchasing a ring but I'm not sure about the sizing. I measured my finger and it's 6.5 inches in circumference. What ring size should I order? Also, do you offer size adjustments after purchase?",
+      "category": "product",
+      "priority": "low",
+      "tags": ["sizing", "ring", "measurement"],
+      "status": "closed"
+    },
+    {
+      "subject": "Bulk Order Inquiry",
+      "message": "I'm planning to order jewelry for my wedding party (10 people). Do you offer any bulk discounts or special pricing for large orders? Also, what would be the estimated delivery time for such an order?",
+      "category": "general",
+      "priority": "medium",
+      "tags": ["bulk", "wedding", "discount"],
+      "status": "open"
+    },
+    {
+      "subject": "Refund Request",
+      "message": "I returned my order #12347 last week as it didn't meet my expectations. The package was delivered back to your warehouse on Monday. When can I expect to receive my refund? The original payment was made via credit card.",
+      "category": "billing",
+      "priority": "high",
+      "tags": ["refund", "return", "credit-card"],
+      "status": "in_progress"
+    },
+    {
+      "subject": "Product Availability",
+      "message": "I saw a beautiful diamond pendant on your website but it shows as out of stock. Do you know when this item will be back in stock? I would like to be notified when it becomes available.",
+      "category": "product",
+      "priority": "low",
+      "tags": ["availability", "diamond", "pendant"],
+      "status": "open"
+    },
+    {
+      "subject": "Mobile App Issue",
+      "message": "I'm using your mobile app and experiencing frequent crashes when browsing products. The app freezes and then closes unexpectedly. I'm using an iPhone 12 with iOS 15. Please fix this issue.",
+      "category": "technical",
+      "priority": "high",
+      "tags": ["mobile-app", "crash", "ios"],
+      "status": "open"
+    },
+    {
+      "subject": "Gift Wrapping Service",
+      "message": "I'm ordering jewelry as a gift and would like to know if you offer gift wrapping services. If yes, what are the additional charges and what does the gift wrapping include?",
+      "category": "general",
+      "priority": "low",
+      "tags": ["gift", "wrapping", "service"],
+      "status": "resolved"
+    }
+  ],
+  "admin_responses": [
+    {
+      "message": "Thank you for bringing this to our attention. We have identified the issue with your payment and it has been processed successfully. Your order status has been updated to 'confirmed' and you should receive a confirmation email shortly. We apologize for the inconvenience.",
+      "status": "resolved"
+    },
+    {
+      "message": "We understand your concern about the product quality. Our customer service team will review your case and contact you within 24 hours to discuss the return process. Please keep the original packaging and we'll arrange for a pickup.",
+      "status": "in_progress"
+    },
+    {
+      "message": "We have reset your password and sent a new temporary password to your email address. Please check your inbox and spam folder. You can change the password after logging in.",
+      "status": "resolved"
+    },
+    {
+      "message": "Your order has been successfully delivered. The tracking information has been updated in your account. Thank you for choosing our services!",
+      "status": "resolved"
+    },
+    {
+      "message": "Based on your finger measurement of 6.5 inches, you should order a size 7 ring. We do offer one free size adjustment within 30 days of purchase. Please let us know if you need any further assistance.",
+      "status": "closed"
+    },
+    {
+      "message": "We offer special pricing for bulk orders. For orders of 10+ items, you'll receive a 15% discount. Delivery time is typically 7-10 business days for bulk orders. Please contact our sales team for a custom quote.",
+      "status": "open"
+    },
+    {
+      "message": "We have received your returned package and are processing your refund. It will be credited back to your original payment method within 5-7 business days. You'll receive an email confirmation once the refund is processed.",
+      "status": "in_progress"
+    },
+    {
+      "message": "The diamond pendant you're interested in will be back in stock in approximately 2 weeks. We've added you to our notification list and will email you as soon as it's available.",
+      "status": "open"
+    },
+    {
+      "message": "We're aware of the mobile app issues and our development team is working on a fix. The updated version should be available in the App Store within the next week. We apologize for the inconvenience.",
+      "status": "open"
+    },
+    {
+      "message": "Yes, we offer beautiful gift wrapping services for an additional $5.99. This includes premium gift box, ribbon, and a personalized gift card. You can select this option during checkout.",
+      "status": "resolved"
+    }
+  ]
+}

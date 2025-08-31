@@ -3,5 +3,3 @@
 module.exports = {
   // Validation functions will go here
 };
-
-

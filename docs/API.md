@@ -19,6 +19,3 @@ JWT token-based authentication will be implemented.
 ## Rate Limiting
 
 API rate limiting details will be documented here.
-
-
-

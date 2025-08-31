@@ -7,6 +7,7 @@ const authRoutes = require('./routes/auth');
 const uploadRoutes = require('./routes/uploads');
 const itemRoutes = require('./routes/items');
 const orderRoutes = require('./routes/orders');
+const queryRoutes = require('./routes/queries');
 
 const app = express();
 
@@ -42,6 +43,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/image', uploadRoutes);
 app.use('/api/items', itemRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/queries', queryRoutes);
 
 module.exports = app;
 

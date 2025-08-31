@@ -3,6 +3,3 @@
 module.exports = {
   // Helper methods will go here
 };
-
-
-
