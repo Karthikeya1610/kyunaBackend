@@ -1,9 +1,6 @@
 const Query = require('../models/Query');
 const User = require('../models/User');
 
-// @desc    Create a new query (User)
-// @route   POST /api/queries
-// @access  Private (User)
 const createQuery = async (req, res) => {
   try {
     const { subject, message, category, priority, tags } = req.body;
@@ -34,9 +31,6 @@ const createQuery = async (req, res) => {
   }
 };
 
-// @desc    Get all queries for a user
-// @route   GET /api/queries/my-queries
-// @access  Private (User)
 const getMyQueries = async (req, res) => {
   try {
     const { page = 1, limit = 10, status, category, priority } = req.query;
