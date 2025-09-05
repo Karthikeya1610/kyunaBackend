@@ -7,6 +7,7 @@ const sanitizeUser = userDoc => ({
   id: userDoc._id,
   name: userDoc.name,
   email: userDoc.email,
+  phoneNumber: userDoc.phoneNumber,
   role: userDoc.role,
   createdAt: userDoc.createdAt,
   updatedAt: userDoc.updatedAt,
@@ -14,17 +15,28 @@ const sanitizeUser = userDoc => ({
 
 const registerUser = async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, phoneNumber, password } = req.body;
 
-    if (!name || !email || !password) {
+    if (!name || !email || !phoneNumber || !password) {
       return res
         .status(400)
-        .json({ message: 'Name, email, and password are required' });
+        .json({
+          message: 'Name, email, phone number, and password are required',
+        });
     }
 
-    const existing = await User.findOne({ email });
-    if (existing) {
+    // Check if email already exists
+    const existingEmail = await User.findOne({ email });
+    if (existingEmail) {
       return res.status(400).json({ message: 'Email already registered' });
+    }
+
+    // Check if phone number already exists
+    const existingPhone = await User.findOne({ phoneNumber });
+    if (existingPhone) {
+      return res
+        .status(400)
+        .json({ message: 'Phone number already registered' });
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -33,6 +45,7 @@ const registerUser = async (req, res) => {
     const user = await User.create({
       name,
       email,
+      phoneNumber,
       password: hashed,
       role: 'user',
     });
@@ -46,6 +59,24 @@ const registerUser = async (req, res) => {
     });
   } catch (err) {
     console.error('registerUser error:', err);
+
+    // Handle validation errors
+    if (err.name === 'ValidationError') {
+      const errors = Object.values(err.errors).map(error => error.message);
+      return res.status(400).json({
+        message: 'Validation error',
+        errors,
+      });
+    }
+
+    // Handle duplicate key errors
+    if (err.code === 11000) {
+      const field = Object.keys(err.keyPattern)[0];
+      return res.status(400).json({
+        message: `${field} already exists`,
+      });
+    }
+
     return res.status(500).json({ message: 'Server error' });
   }
 };
@@ -124,6 +155,7 @@ const login = async (req, res) => {
         id: user._id,
         name: user.name,
         email: user.email,
+        phoneNumber: user.phoneNumber,
         role: user.role,
       },
     });
