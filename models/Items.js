@@ -6,6 +6,7 @@ const itemSchema = new mongoose.Schema(
     category: { type: String, required: true },
     price: { type: Number, required: true },
     discountPrice: { type: Number, default: null },
+    weight: { type: Number, required: true, min: 0 },
     rating: { type: Number, default: 0 },
     totalReviews: { type: Number, default: 0 },
     availability: {

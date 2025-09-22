@@ -7,21 +7,28 @@ const createItem = async (req, res) => {
       category,
       price,
       discountPrice,
+      weight,
       availability,
       images,
       description,
       specifications,
     } = req.body;
 
-    if (!name || !category || !price) {
+    if (!name || !category || !price || !weight) {
       return res.status(400).json({
-        message: 'Name, category, and price are required fields',
+        message: 'Name, category, price, and weight are required fields',
       });
     }
 
     if (price <= 0) {
       return res.status(400).json({
         message: 'Price must be greater than 0',
+      });
+    }
+
+    if (weight <= 0) {
+      return res.status(400).json({
+        message: 'Weight must be greater than 0',
       });
     }
 
@@ -42,6 +49,7 @@ const createItem = async (req, res) => {
       category,
       price,
       discountPrice,
+      weight,
       availability: availability || 'In Stock',
       images: images || [],
       description: description || '',
@@ -179,6 +187,12 @@ const updateItem = async (req, res) => {
     if (updateData.price && updateData.price <= 0) {
       return res.status(400).json({
         message: 'Price must be greater than 0',
+      });
+    }
+
+    if (updateData.weight && updateData.weight <= 0) {
+      return res.status(400).json({
+        message: 'Weight must be greater than 0',
       });
     }
 
