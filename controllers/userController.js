@@ -3,6 +3,3 @@
 module.exports = {
   // User controller methods will go here
 };
-
-
-

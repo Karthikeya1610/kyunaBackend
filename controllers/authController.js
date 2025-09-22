@@ -18,11 +18,9 @@ const registerUser = async (req, res) => {
     const { name, email, phoneNumber, password } = req.body;
 
     if (!name || !email || !phoneNumber || !password) {
-      return res
-        .status(400)
-        .json({
-          message: 'Name, email, phone number, and password are required',
-        });
+      return res.status(400).json({
+        message: 'Name, email, phone number, and password are required',
+      });
     }
 
     // Check if email already exists
@@ -144,8 +142,8 @@ const login = async (req, res) => {
 
     const token = jwt.sign(
       { id: user._id, email: user.email, role: user.role },
-      process.env.JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRES_IN || '7d' }
+      process.env.JWT_SECRET
+      // Removed expiresIn to make token never expire
     );
 
     res.status(200).json({
