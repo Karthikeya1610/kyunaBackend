@@ -82,16 +82,14 @@ const addPrice = async (req, res) => {
   }
 };
 
-const updatePrice = async (req, res) => {
+const updatePriceById = async (req, res) => {
   try {
-    const { priceIndex } = req.params;
+    const { priceId } = req.params;
     const { originalPrice, discountedPrice, name, description } = req.body;
 
-    const index = parseInt(priceIndex);
-
-    if (isNaN(index) || index < 0) {
+    if (!priceId) {
       return res.status(400).json({
-        message: 'Invalid price index',
+        message: 'Price ID is required',
       });
     }
 
@@ -117,15 +115,21 @@ const updatePrice = async (req, res) => {
       });
     }
 
-    if (index >= priceConfig.prices.length) {
+    // Find the price by ID
+    const priceIndex = priceConfig.prices.findIndex(
+      price => price._id.toString() === priceId
+    );
+
+    if (priceIndex === -1) {
       return res.status(404).json({
-        message: 'Price index out of range',
+        message: 'Price not found with the provided ID',
       });
     }
 
-    // Update the price at the specified index
-    const currentPrice = priceConfig.prices[index];
+    // Update the price at the found index
+    const currentPrice = priceConfig.prices[priceIndex];
     const updatedPrice = {
+      _id: currentPrice._id, // Keep the same ID
       originalPrice: originalPrice || currentPrice.originalPrice,
       discountedPrice: discountedPrice || currentPrice.discountedPrice,
       name: name || currentPrice.name,
@@ -141,16 +145,16 @@ const updatePrice = async (req, res) => {
       });
     }
 
-    priceConfig.prices[index] = updatedPrice;
+    priceConfig.prices[priceIndex] = updatedPrice;
     await priceConfig.save();
 
     res.status(200).json({
       message: 'Price updated successfully',
       price: updatedPrice,
-      index: index,
+      priceId: priceId,
     });
   } catch (error) {
-    console.error('updatePrice error:', error);
+    console.error('updatePriceById error:', error);
     res.status(500).json({
       message: 'Server error while updating price',
       error: error.message,
@@ -158,14 +162,13 @@ const updatePrice = async (req, res) => {
   }
 };
 
-const deletePrice = async (req, res) => {
+const deletePriceById = async (req, res) => {
   try {
-    const { priceIndex } = req.params;
-    const index = parseInt(priceIndex);
+    const { priceId } = req.params;
 
-    if (isNaN(index) || index < 0) {
+    if (!priceId) {
       return res.status(400).json({
-        message: 'Invalid price index',
+        message: 'Price ID is required',
       });
     }
 
@@ -178,23 +181,29 @@ const deletePrice = async (req, res) => {
       });
     }
 
-    if (index >= priceConfig.prices.length) {
+    // Find the price by ID
+    const priceIndex = priceConfig.prices.findIndex(
+      price => price._id.toString() === priceId
+    );
+
+    if (priceIndex === -1) {
       return res.status(404).json({
-        message: 'Price index out of range',
+        message: 'Price not found with the provided ID',
       });
     }
 
-    // Remove the price at the specified index
-    const deletedPrice = priceConfig.prices.splice(index, 1)[0];
+    // Remove the price at the found index
+    const deletedPrice = priceConfig.prices.splice(priceIndex, 1)[0];
     await priceConfig.save();
 
     res.status(200).json({
       message: 'Price deleted successfully',
       deletedPrice,
+      priceId: priceId,
       remainingPrices: priceConfig.prices.length,
     });
   } catch (error) {
-    console.error('deletePrice error:', error);
+    console.error('deletePriceById error:', error);
     res.status(500).json({
       message: 'Server error while deleting price',
       error: error.message,
@@ -202,14 +211,13 @@ const deletePrice = async (req, res) => {
   }
 };
 
-const togglePriceStatus = async (req, res) => {
+const togglePriceStatusById = async (req, res) => {
   try {
-    const { priceIndex } = req.params;
-    const index = parseInt(priceIndex);
+    const { priceId } = req.params;
 
-    if (isNaN(index) || index < 0) {
+    if (!priceId) {
       return res.status(400).json({
-        message: 'Invalid price index',
+        message: 'Price ID is required',
       });
     }
 
@@ -222,23 +230,29 @@ const togglePriceStatus = async (req, res) => {
       });
     }
 
-    if (index >= priceConfig.prices.length) {
+    // Find the price by ID
+    const priceIndex = priceConfig.prices.findIndex(
+      price => price._id.toString() === priceId
+    );
+
+    if (priceIndex === -1) {
       return res.status(404).json({
-        message: 'Price index out of range',
+        message: 'Price not found with the provided ID',
       });
     }
 
     // Toggle the price status
-    priceConfig.prices[index].isActive = !priceConfig.prices[index].isActive;
+    priceConfig.prices[priceIndex].isActive =
+      !priceConfig.prices[priceIndex].isActive;
     await priceConfig.save();
 
     res.status(200).json({
-      message: `Price ${priceConfig.prices[index].isActive ? 'activated' : 'deactivated'} successfully`,
-      price: priceConfig.prices[index],
-      index: index,
+      message: `Price ${priceConfig.prices[priceIndex].isActive ? 'activated' : 'deactivated'} successfully`,
+      price: priceConfig.prices[priceIndex],
+      priceId: priceId,
     });
   } catch (error) {
-    console.error('togglePriceStatus error:', error);
+    console.error('togglePriceStatusById error:', error);
     res.status(500).json({
       message: 'Server error while toggling price status',
       error: error.message,
@@ -249,7 +263,7 @@ const togglePriceStatus = async (req, res) => {
 module.exports = {
   getPrices,
   addPrice,
-  updatePrice,
-  deletePrice,
-  togglePriceStatus,
+  updatePriceById,
+  deletePriceById,
+  togglePriceStatusById,
 };

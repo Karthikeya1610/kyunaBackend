@@ -3,9 +3,9 @@ const router = express.Router();
 const {
   getPrices,
   addPrice,
-  updatePrice,
-  deletePrice,
-  togglePriceStatus,
+  updatePriceById,
+  deletePriceById,
+  togglePriceStatusById,
 } = require('../controllers/priceController');
 const { protect, admin } = require('../middleware/auth');
 
@@ -14,8 +14,10 @@ router.get('/', getPrices);
 
 // Protected routes (authentication required)
 router.post('/add', protect, admin, addPrice);
-router.put('/update/:priceIndex', protect, admin, updatePrice);
-router.delete('/delete/:priceIndex', protect, admin, deletePrice);
-router.patch('/toggle/:priceIndex', protect, admin, togglePriceStatus);
+
+// ID-based routes
+router.put('/update/:priceId', protect, admin, updatePriceById);
+router.delete('/delete/:priceId', protect, admin, deletePriceById);
+router.patch('/toggle/:priceId', protect, admin, togglePriceStatusById);
 
 module.exports = router;

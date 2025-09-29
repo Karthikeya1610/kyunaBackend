@@ -4,6 +4,10 @@ const priceSchema = new mongoose.Schema(
   {
     prices: [
       {
+        _id: {
+          type: mongoose.Schema.Types.ObjectId,
+          default: mongoose.Types.ObjectId,
+        },
         originalPrice: {
           type: Number,
           required: true,
